@@ -21,4 +21,15 @@
 
 # 3
 
+1. `awk -f sample.awk -v n=20 /usr/share/wordlists/rockyou.txt > rockyou20.txt`
+2. `awk -f sample.awk -v n=3 rockyou20.txt > rockyou3.txt`
+3. `sed -i ':a;N;$!ba;s/\n/ /g' input_file`
+4. `ssh-keygen -t ed25519 -N "$(cat rockyou3.txt)" -f id_ed25519`
+5. `python3 /usr/share/john/ssh2john.py id_ed25519 > ssh_hash.txt`
+6. `hashcat -a 1 -j '$ ' rockyou20.txt rockyou20.txt --stdout > intermediate.txt`
+7. `hashcat -a 1 -j '$ ' intermediate.txt rockyou20.txt --stdout > combos.txt`
+8. `john --wordlist=combos.txt ssh_hash.txt`
+
 # 4
+
+John the Ripper does not support this feature. It's exclusive to HashCat.
