@@ -37,6 +37,7 @@
 6. `hashcat -a 1 -j '$ ' rockyou20.txt rockyou20.txt --stdout > intermediate.txt`
 7. `hashcat -a 1 -j '$ ' intermediate.txt rockyou20.txt --stdout > combos.txt`
 8. `john --wordlist=combos.txt ssh_hash.txt`
+![](ssh.png)
 
 # 4
 
