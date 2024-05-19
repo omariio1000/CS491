@@ -711,3 +711,214 @@
 ```
 
 # 6
+
+1. `python scancsv.py --stats R.csv`
+
+```
+Num packets: 99142, Num bytes: 71683046
+IP Protocols:
+  1:         7
+  2:         2
+  6:     39138
+ 17:     59995
+TCP Services (port: count):
+   22:       448
+   23:       118
+   25:       201
+   80:      1361
+  110:       990
+  113:        55
+  119:        68
+  135:        24
+  139:      9455
+  515:       125
+  700:        40
+  712:       301
+  721:        66
+  891:       239
+UDP Services (port: count):
+    0:        31
+   53:       428
+   67:         3
+   68:         3
+  137:       121
+  138:       118
+```
+
+2. `python scancsv.py --countip R.csv`
+
+```
+234.142.142.142: 42980
+10.5.63.230: 16073
+10.5.63.231: 6974
+10.5.63.27: 5141
+10.5.63.204: 5060
+10.5.63.22: 5043
+10.5.63.17: 3904
+10.5.63.12: 3100
+10.5.63.11: 2539
+10.5.63.6: 1607
+10.5.63.7: 1090
+10.5.63.25: 631
+10.5.63.18: 520
+10.5.63.202: 375
+10.5.63.28: 302
+32.97.255.112: 293
+209.67.181.11: 268
+10.5.63.24: 234
+10.5.63.1: 227
+10.5.63.23: 194
+10.5.63.21: 184
+10.5.63.30: 136
+209.67.181.20: 133
+10.5.63.255: 126
+10.5.63.8: 125
+208.10.192.175: 117
+10.5.63.200: 111
+10.5.63.14: 109
+10.5.63.41: 103
+10.5.63.36: 99
+193.164.170.30: 91
+208.10.192.202: 83
+216.101.171.2: 80
+204.71.200.167: 78
+199.245.73.66: 68
+207.46.142.26: 66
+204.71.200.246: 60
+10.5.63.10: 56
+207.5.63.20: 51
+208.10.192.176: 48
+206.13.28.62: 43
+10.5.63.29: 41
+234.42.42.42: 38
+206.170.168.217: 33
+206.253.217.13: 28
+128.9.0.107: 26
+192.33.4.12: 26
+192.36.148.17: 26
+202.12.27.33: 25
+128.8.10.90: 25
+207.46.143.254: 20
+204.71.201.113: 20
+208.10.192.161: 18
+10.5.63.26: 17
+199.222.69.4: 15
+206.253.217.8: 15
+198.232.147.17: 15
+192.5.5.241: 13
+192.112.36.4: 13
+193.0.14.129: 13
+198.41.0.4: 13
+192.203.230.10: 13
+198.32.64.12: 13
+128.63.2.53: 13
+198.41.0.10: 13
+199.170.104.36: 13
+207.44.165.251: 13
+10.5.63.15: 10
+10.5.63.39: 8
+10.5.63.201: 8
+10.5.63.203: 8
+10.5.63.9: 8
+10.5.63.205: 8
+10.5.63.206: 8
+255.255.255.255: 6
+10.5.63.35: 6
+199.95.210.99: 5
+199.95.207.173: 5
+10.5.63.16: 4
+10.5.63.4: 3
+207.5.63.2: 3
+10.5.255.255: 1
+10.5.63.212: 1
+18.85.2.138: 1
+```
+
+3. `python scancsv.py --connto R.csv`
+
+```
+10.5.63.27 has 219 distinct services: tcp/139, tcp/3282, tcp/2626, tcp/3283, tcp/3284, tcp/3285, tcp/3286, tcp/3287, tcp/3288, tcp/3289, tcp/3290, tcp/3291, tcp/3292, tcp/3293, tcp/3294, tcp/3295, tcp/3296, tcp/3297, tcp/3298, tcp/3299, tcp/3300, tcp/3301, tcp/3302, tcp/3303, tcp/3304, tcp/3305, tcp/3306, tcp/3307, tcp/3308, tcp/3309, tcp/3310, tcp/3311, tcp/3312, tcp/3313, tcp/3314, tcp/3315, tcp/3316, tcp/3317, tcp/3318, tcp/3319, tcp/3320, tcp/3321, tcp/3322, tcp/3323, tcp/3324, tcp/3325, tcp/3326, tcp/3327, tcp/3328, tcp/3329, tcp/3330, tcp/3331, tcp/3332, tcp/3333, tcp/3334, tcp/3335, tcp/3336, tcp/3337, tcp/3338, tcp/3339, tcp/3340, tcp/3341, tcp/3342, tcp/3343, tcp/3344, tcp/3345, tcp/3346, tcp/3347, tcp/3348, tcp/3349, tcp/3350, tcp/3351, tcp/3352, tcp/3353, udp/137, tcp/3354, tcp/1057, tcp/3355, tcp/1042, udp/1066, tcp/1068, tcp/3356, tcp/113, tcp/1064, udp/1055, tcp/2288, tcp/3141, tcp/3357, udp/3359, tcp/3360, tcp/3361, udp/3362, tcp/3363, tcp/3364, udp/3365, tcp/3366, tcp/3367, tcp/3368, tcp/3369, tcp/3370, tcp/3371, tcp/3372, tcp/3373, tcp/3374, tcp/3375, tcp/3376, tcp/3377, tcp/3378, tcp/3379, tcp/3380, tcp/3381, tcp/3382, tcp/3383, tcp/3384, tcp/3385, tcp/3386, tcp/3387, tcp/3388, tcp/3389, tcp/3390, tcp/3391, tcp/3392, tcp/3393, tcp/3394, tcp/3395, tcp/3396, tcp/3397, tcp/3398, tcp/3399, tcp/3400, tcp/3401, tcp/3402, tcp/3403, tcp/3404, tcp/3405, tcp/3406, tcp/3407, tcp/3408, tcp/3409, tcp/3410, udp/3411, tcp/3412, tcp/3413, tcp/3414, tcp/3415, tcp/3416, tcp/3417, tcp/3418, tcp/3419, tcp/3420, tcp/3421, tcp/3422, tcp/3423, tcp/3424, tcp/3425, tcp/3426, udp/3427, tcp/3428, udp/3429, tcp/3430, tcp/3431, tcp/3432, tcp/3433, tcp/3434, tcp/3435, udp/3436, tcp/3437, udp/3440, tcp/3441, udp/3438, udp/3439, tcp/3442, tcp/3443, tcp/3444, tcp/3445, udp/3446, tcp/3447, tcp/3449, udp/3448, tcp/3450, tcp/3451, tcp/3452, tcp/3453, tcp/3454, tcp/3455, udp/3456, tcp/3457, tcp/3458, tcp/3459, tcp/3460, tcp/3461, tcp/3462, tcp/3463, tcp/3464, tcp/3465, tcp/3466, tcp/3467, tcp/3468, tcp/3469, tcp/3470, tcp/3471, tcp/3472, tcp/3473, tcp/3474, tcp/3475, tcp/3476, tcp/3477, tcp/3478, tcp/3479, tcp/3480, tcp/3481, tcp/3482, tcp/3483, tcp/3484, tcp/3485, tcp/3486, tcp/3487, tcp/3488, tcp/3489
+10.5.63.23 has 38 distinct services: tcp/1032, udp/1044, tcp/1031, udp/137, udp/138, tcp/1025, tcp/1027, udp/1033, udp/1034, udp/1036, udp/1037, tcp/1035, udp/1039, udp/1040, tcp/1038, udp/1045, tcp/1043, udp/1047, udp/1048, tcp/1046, udp/1050, udp/1051, tcp/1049, udp/1053, udp/1054, tcp/1052, udp/1056, udp/1057, tcp/1055, udp/1061, udp/1062, tcp/1060, udp/1064, udp/1065, tcp/1063, udp/1066, udp/1067, tcp/1068
+10.5.63.18 has 29 distinct services: tcp/1058, tcp/891, udp/1744, udp/1745, tcp/1746, udp/1748, udp/1747, tcp/1749, tcp/1750, tcp/1751, udp/1752, udp/1753, tcp/1754, tcp/1756, tcp/1757, tcp/1758, tcp/1759, tcp/1760, tcp/1770, tcp/1771, tcp/1772, tcp/1773, tcp/1774, tcp/1776, tcp/1777, tcp/1778, tcp/1779, tcp/1780, tcp/1054
+10.5.63.14 has 24 distinct services: tcp/3089, tcp/1917, tcp/3086, tcp/3090, tcp/3077, tcp/2788, tcp/3091, tcp/113, tcp/3092, udp/137, udp/138, tcp/3093, tcp/3094, tcp/3095, udp/3096, udp/3097, udp/3098, udp/3099, udp/3100, udp/3101, tcp/3102, udp/3103, udp/3104, tcp/3105
+10.5.63.12 has 22 distinct services: tcp/1655, tcp/139, tcp/4717, tcp/4718, tcp/4719, udp/4720, tcp/4721, udp/4722, tcp/4723, tcp/4724, udp/4725, tcp/4726, udp/4727, tcp/4728, tcp/4711, tcp/4729, udp/4730, tcp/4731, udp/4732, tcp/4733, udp/4734, tcp/4735
+10.5.63.6 has 21 distinct services: tcp/110, tcp/25, tcp/25177, udp/53, tcp/22, tcp/25179, tcp/25186, tcp/25187, tcp/1031, tcp/25190, tcp/25191, tcp/25205, tcp/25206, tcp/25222, tcp/25223, tcp/25242, tcp/25247, tcp/25248, tcp/25252, tcp/25271, tcp/25273
+10.5.63.22 has 19 distinct services: tcp/139, tcp/1530, udp/1220, udp/1221, tcp/3735, tcp/1188, udp/1223, udp/1224, udp/1225, udp/1226, udp/1228, tcp/23, udp/1229, udp/1230, udp/1232, udp/1233, udp/1234, udp/1236, tcp/1433
+10.5.63.231 has 19 distinct services: tcp/1058, tcp/139, tcp/3191, udp/137, udp/3192, udp/3193, udp/3194, udp/3195, udp/3196, udp/3197, udp/3198, udp/3199, udp/3200, tcp/3160, udp/3201, udp/3202, tcp/3203, tcp/3204, tcp/3205
+10.5.63.230 has 19 distinct services: tcp/139, udp/0, udp/4747, tcp/3323, udp/138, tcp/2500, tcp/3386, tcp/3322, udp/3387, udp/3388, udp/137, tcp/3389, tcp/3390, tcp/3391, tcp/3392, tcp/3393, tcp/3394, tcp/3397, udp/5001
+10.5.63.21 has 17 distinct services: tcp/2411, tcp/2502, tcp/1037, tcp/2503, tcp/2504, tcp/2505, tcp/6000, tcp/2403, tcp/2506, udp/2507, udp/2508, tcp/2509, tcp/2510, tcp/2511, udp/2512, udp/2513, tcp/2514
+207.5.63.20 has 17 distinct services: udp/4143, udp/4145, udp/4147, udp/4149, udp/4150, udp/4153, udp/4155, udp/4157, udp/4158, udp/4160, udp/4162, udp/4164, udp/4166, udp/4168, udp/4170, udp/4171, udp/4173
+10.5.63.17 has 12 distinct services: tcp/1129, tcp/139, udp/137, tcp/1133, tcp/1134, tcp/1135, tcp/1136, tcp/1137, tcp/1048, tcp/1056, tcp/1044, tcp/1052
+10.5.63.1 has 12 distinct services: tcp/3096, tcp/113, tcp/3130, udp/53, tcp/3182, tcp/3190, tcp/3191, tcp/3322, tcp/3327, tcp/3328, tcp/3333, tcp/3351
+10.5.63.11 has 11 distinct services: tcp/1209, tcp/139, tcp/1298, tcp/1299, udp/137, tcp/1300, tcp/1295, tcp/1301, tcp/1302, tcp/1303, tcp/1304
+10.5.63.30 has 11 distinct services: tcp/1746, tcp/1825, tcp/1826, tcp/1827, tcp/1828, tcp/1829, tcp/1830, tcp/1831, tcp/1832, tcp/1833, tcp/1834
+10.5.63.41 has 10 distinct services: tcp/1110, tcp/1111, tcp/1112, tcp/1113, tcp/1114, tcp/1115, tcp/1116, tcp/1117, tcp/1118, tcp/1119
+10.5.63.7 has 10 distinct services: tcp/139, tcp/1049, udp/137, udp/138, tcp/1037, tcp/1806, tcp/80, tcp/135, tcp/721, tcp/1814
+10.5.63.202 has 7 distinct services: tcp/1650, tcp/1134, udp/1829, udp/1831, udp/1833, udp/1837, udp/1846
+10.5.63.204 has 5 distinct services: tcp/5631, udp/137, udp/138, tcp/1462, tcp/1308
+10.5.63.25 has 5 distinct services: tcp/1055, tcp/1056, udp/137, tcp/1057, tcp/139
+10.5.63.24 has 3 distinct services: udp/1025, udp/137, tcp/23
+10.5.63.36 has 3 distinct services: udp/4747, udp/12000, udp/5001
+10.5.63.10 has 3 distinct services: tcp/3563, tcp/3140, tcp/3564
+10.5.63.15 has 3 distinct services: udp/137, tcp/1118, udp/138
+10.5.63.16 has 2 distinct services: tcp/2706, tcp/2689
+10.5.63.255 has 2 distinct services: udp/138, udp/137
+10.5.63.28 has 2 distinct services: tcp/1035, tcp/712
+255.255.255.255 has 2 distinct services: udp/67, udp/68
+10.5.63.26 has 2 distinct services: tcp/1329, tcp/1330
+10.5.63.29 has 2 distinct services: tcp/700, tcp/1058
+10.5.63.200 has 2 distinct services: tcp/80, tcp/139
+10.5.63.4 has 1 distinct services: tcp/23
+128.9.0.107 has 1 distinct services: udp/53
+216.101.171.2 has 1 distinct services: tcp/110
+192.33.4.12 has 1 distinct services: udp/53
+192.36.148.17 has 1 distinct services: udp/53
+202.12.27.33 has 1 distinct services: udp/53
+128.8.10.90 has 1 distinct services: udp/53
+234.42.42.42 has 1 distinct services: udp/4747
+192.5.5.241 has 1 distinct services: udp/53
+192.112.36.4 has 1 distinct services: udp/53
+193.0.14.129 has 1 distinct services: udp/53
+198.41.0.4 has 1 distinct services: udp/53
+192.203.230.10 has 1 distinct services: udp/53
+193.164.170.30 has 1 distinct services: tcp/110
+198.32.64.12 has 1 distinct services: udp/53
+128.63.2.53 has 1 distinct services: udp/53
+198.41.0.10 has 1 distinct services: udp/53
+32.97.255.112 has 1 distinct services: tcp/80
+207.46.142.26 has 1 distinct services: tcp/80
+207.46.143.254 has 1 distinct services: tcp/80
+206.13.28.62 has 1 distinct services: tcp/110
+199.170.104.36 has 1 distinct services: tcp/25
+207.5.63.2 has 1 distinct services: udp/53
+204.71.200.167 has 1 distinct services: tcp/80
+204.71.200.246 has 1 distinct services: tcp/80
+204.71.201.113 has 1 distinct services: tcp/80
+10.5.63.35 has 1 distinct services: udp/137
+207.44.165.251 has 1 distinct services: tcp/25
+209.67.181.20 has 1 distinct services: tcp/80
+209.67.181.11 has 1 distinct services: tcp/80
+10.5.63.39 has 1 distinct services: tcp/3156
+199.245.73.66 has 1 distinct services: tcp/119
+206.170.168.217 has 1 distinct services: tcp/23
+10.5.63.201 has 1 distinct services: tcp/1057
+10.5.255.255 has 1 distinct services: udp/138
+199.222.69.4 has 1 distinct services: tcp/25
+10.5.63.203 has 1 distinct services: tcp/1576
+206.253.217.13 has 1 distinct services: tcp/80
+206.253.217.8 has 1 distinct services: tcp/80
+10.5.63.9 has 1 distinct services: tcp/1457
+208.10.192.202 has 1 distinct services: tcp/80
+199.95.210.99 has 1 distinct services: tcp/80
+208.10.192.175 has 1 distinct services: tcp/80
+208.10.192.161 has 1 distinct services: tcp/80
+199.95.207.173 has 1 distinct services: tcp/80
+208.10.192.176 has 1 distinct services: tcp/80
+10.5.63.205 has 1 distinct services: tcp/1126
+10.5.63.206 has 1 distinct services: tcp/1149
+198.232.147.17 has 1 distinct services: tcp/25
+10.5.63.8 has 1 distinct services: tcp/515
+234.142.142.142 has 1 distinct services: udp/5001
+10.5.63.212 has 1 distinct services: udp/34540
+18.85.2.138 has 1 distinct services: udp/53
+```
