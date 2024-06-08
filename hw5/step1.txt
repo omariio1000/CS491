@@ -1,0 +1,125 @@
+Phase 1: Public speaking is very easy.
+
+IDA: push    offset aPublicSpeaking ; "Public speaking is very easy."
+
+Phase 2: 1 2 6 24 120 720
+
+It starts by calling read_six_numbers with the address of var_18 (a local variable) and storing the six numbers there.
+It then checks if the first number (at var_18) is equal to 1. If not, it calls explode_bomb.
+Next, it initializes ebx to 1 and esi to the address of var_18.
+A loop runs from ebx = 1 to ebx = 5 (inclusive):
+It calculates eax as ebx + 1 multiplied by the number at esi + ebx*4 - 4 (the previous number in the array).
+It compares this result with the current number in the array (esi + ebx*4). If they are not equal, it calls explode_bomb.
+It increments ebx.
+Understanding the Loop
+Let's break down the loop conditions:
+For ebx = 1, it checks:
+eax = (1 + 1) * var_18[0] which is 2 * 1 = 2
+This must be equal to var_18[1]
+For ebx = 2, it checks:
+eax = (2 + 1) * var_18[1] which is 3 * 2 = 6
+This must be equal to var_18[2]
+For ebx = 3, it checks:
+eax = (3 + 1) * var_18[2] which is 4 * 6 = 24
+This must be equal to var_18[3]
+For ebx = 4, it checks:
+eax = (4 + 1) * var_18[3] which is 5 * 24 = 120
+This must be equal to var_18[4]
+For ebx = 5, it checks:
+eax = (5 + 1) * var_18[4] which is 6 * 120 = 720
+This must be equal to var_18[5]
+
+Phase 3: 0 q 777
+
+.text:08048BE0 loc_8048BE0:                            ; CODE XREF: phase_3+3E↑j
+.text:08048BE0                                         ; DATA XREF: .rodata:jpt_8048BD6↓o
+.text:08048BE0                 mov     bl, 71h ; 'q'   ; jumptable 08048BD6 case 0
+.text:08048BE2                 cmp     [ebp+var_4], 309h
+.text:08048BE9                 jz      loc_8048C8F
+.text:08048BEF                 call    explode_bomb
+.text:08048BF4                 jmp     loc_8048C8F
+
+Choose case 0, then char is q and dec is 777
+
+Phase 4: 9
+
+Need to make func 4 return 55. Func 4 is basically fibonacci
+
+Phase 5: o05kma
+
+0 -> i
+1 -> s
+2 -> r
+3 -> v
+4 -> e
+5 -> a
+6 -> w
+7 -> h
+8 -> o
+9 -> b
+a -> s
+b -> r
+c -> v
+d -> e
+e -> a
+f -> w
+g -> h
+h -> o
+i -> b
+j -> p
+k -> n
+l -> u
+m -> t
+n -> f
+o -> g
+p -> i
+q -> s
+r -> r
+s -> v
+t -> e
+u -> 
+v -> 
+w -> 
+x -> 
+y -> 
+z -> 
+
+Phase 6: 
+
+n6 -> 176
+n5 -> 212
+n4 -> 229
+n3 -> 45
+n2 -> 213
+n1 -> 253
+
+
+
+1 4 2 5 6 3
+
+3 6 5 2 4 1
+
+not ?
+not 3
+not 4
+not 5
+not 6
+
+1: 253
+2: 725
+3: 301
+4: 997
+5: 212
+6: 432
+
+4 2 6 3 1 5
+
+212 vs 997
+432 vs 212
+
+6 nodes, check
+
+0x8048e75 <phase_6+221> cmp    (%edx),%eax
+0x8048e77 <phase_6+223> jge    0x8048e7e <phase_6+230> 
+
+eax is previous node and edx is current and eax is previous. current must be less than previous otherwise it will blow up.
