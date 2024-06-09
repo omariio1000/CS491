@@ -34,3 +34,20 @@ All my work going through this programs is in the file 'Step1.txt'. The final an
 5. `o05kma`
 6. `4 2 6 3 1 5`
 
+# 2
+
+![](snort.png)
+
+![](snortchallenge.png)
+
+# 3
+
+I installed semgrep on my kali VM, and ran it against `weather.py`, a default example file in kali. I used this command: `semgrep --config=https://semgrep.dev/p/r2c-security-audit weather.py`, which uses the rules for security. Semgrep was able to find one vulnerability. 
+
+![](semgrep.png)
+
+# 4
+
+I was unable to set up gvm. I talked to other students in the class and they were also unable to set it up.
+
+![](gvmfail.png)
